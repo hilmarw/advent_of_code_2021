@@ -18,33 +18,32 @@ class Day02 {
         }
 
         private fun part1(input: List<String>): Int {
-            val controls = input.map { it.split(" ") }
+            val controls = input.map { Pair(it.substringBefore(' '), it.substringAfter(' ').toInt()) }
             var horizontal = 0
             var vertical = 0
             controls.forEach {
-                when (it.first()) {
-                    "forward" -> horizontal += it[1].toInt()
-                    "up" -> vertical -= it[1].toInt()
-                    "down" -> vertical += it[1].toInt()
+                when (it.first) {
+                    "forward" -> horizontal += it.second
+                    "up" -> vertical -= it.second
+                    "down" -> vertical += it.second
                 }
             }
-
             return horizontal * vertical
         }
 
         private fun part2(input: List<String>): Int {
-            val controls = input.map { it.split(" ") }
+            val controls = input.map { Pair(it.substringBefore(' '), it.substringAfter(' ').toInt()) }
             var horizontal = 0
             var vertical = 0
             var aim = 0
             controls.forEach {
-                when (it.first()) {
+                when (it.first) {
                     "forward" -> {
-                        horizontal += it[1].toInt()
-                        vertical += aim * it[1].toInt()
+                        horizontal += it.second
+                        vertical += aim * it.second
                     }
-                    "up" -> aim -= it[1].toInt()
-                    "down" -> aim += it[1].toInt()
+                    "up" -> aim -= it.second
+                    "down" -> aim += it.second
                 }
             }
             return horizontal * vertical
