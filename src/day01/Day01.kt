@@ -17,13 +17,13 @@ class Day01 {
             println(part2(input))
         }
 
-        fun part1(input: List<String>): Int {
+        private fun part1(input: List<String>): Int {
             val depths = input.map { it.toInt() }
 
             return calculate(depths)
         }
 
-        fun part2(input: List<String>): Int {
+        private fun part2(input: List<String>): Int {
             val depths = input.map { it.toInt() }
             val windowDepths =
                 depths.mapIndexedNotNull { index, i ->
@@ -36,7 +36,7 @@ class Day01 {
 
         }
 
-        fun calculate(depths: List<Int>): Int {
+        private fun calculate(depths: List<Int>): Int {
             var depth = depths.first()
             var counter = 0
             depths.forEach {

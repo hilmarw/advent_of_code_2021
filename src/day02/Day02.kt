@@ -17,7 +17,7 @@ class Day02 {
             println(part2(input))
         }
 
-        fun part1(input: List<String>): Int {
+        private fun part1(input: List<String>): Int {
             val controls = input.map { it.split(" ") }
             var horizontal = 0
             var vertical = 0
@@ -32,7 +32,7 @@ class Day02 {
             return horizontal * vertical
         }
 
-        fun part2(input: List<String>): Int {
+        private fun part2(input: List<String>): Int {
             val controls = input.map { it.split(" ") }
             var horizontal = 0
             var vertical = 0
