@@ -1,6 +1,6 @@
 package main
 
-import day07.Day07
+import day08.Day08
 
 fun main() {
 //    Day01.runDay()
@@ -9,5 +9,6 @@ fun main() {
 //    Day04.runDay()
 //    Day05.runDay()
 //    Day06.runDay()
-    Day07.runDay()
+//    Day07.runDay()
+    Day08.runDay()
 }
