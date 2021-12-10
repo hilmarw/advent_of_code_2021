@@ -1,4 +1,4 @@
-import day09.Day09
+import day10.Day10
 
 fun main() {
 //    Day01.runDay()
@@ -9,5 +9,6 @@ fun main() {
 //    Day06.runDay()
 //    Day07.runDay()
 //    Day08.runDay()
-    Day09.runDay()
+//    Day09.runDay()
+    Day10.runDay()
 }
